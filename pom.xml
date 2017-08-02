@@ -10,7 +10,9 @@
 
     <properties>
         <serenity.version>1.5.3</serenity.version>
-        <!--<serenity.jbehave.version>1.21.0</serenity.jbehave.version>-->
+        <serenity.cucumber.version>1.5.4</serenity.cucumber.version>
+        <failsafe.version>2.19.1</failsafe.version>
+        <token>a17f0dc6b7352e2b088e0229d1428a2e3614eca4</token>
     </properties>
 
     <dependencies>
@@ -32,7 +34,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
-            <version>1.5.4</version>
+            <version>${serenity.cucumber.version}</version>
         </dependency>
 
     </dependencies>
@@ -67,7 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${failsafe.version}</version>
 
                 <configuration>
                     <includes>

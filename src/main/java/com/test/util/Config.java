@@ -21,7 +21,11 @@ public class Config {
         }
 
         USER_NAME = prop.getProperty("user.name");
-        TOKEN = prop.getProperty("token");
+        if (System.getProperty("token") == null){
+            throw new RuntimeException("Please provide github access token to call api");
+        }
+
+        TOKEN = System.getProperty("token");
         REPOSITORY_NAME = prop.getProperty("repository.name");
         BASE_URL = prop.getProperty("base.url");
         REPOS_ENDPOINT = prop.getProperty("repos.endpoint");
