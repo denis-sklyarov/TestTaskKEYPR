@@ -10,6 +10,7 @@
 
     <properties>
         <serenity.version>1.5.3</serenity.version>
+        <!--<serenity.jbehave.version>1.21.0</serenity.jbehave.version>-->
     </properties>
 
     <dependencies>
@@ -28,6 +29,12 @@
             <artifactId>serenity-junit</artifactId>
             <version>${serenity.version}</version>
         </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
     </dependencies>
 
 
@@ -44,7 +51,7 @@
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
-                <version>1.2.2</version>
+                <version>${serenity.version}</version>
 
                 <executions>
                     <execution>
